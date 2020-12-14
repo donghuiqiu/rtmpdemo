@@ -1,5 +1,8 @@
 # rtmpdemo（Android）
 
+因为之前用了react-native-rtmpview和react-native-vlc-media-player集成直播，可以播放了但是有卡顿
+
+
 1、下载rtmpdemo到本地
 
 2、将rtmpdemo里面的android/app/libs/LiteAVSDK_Smart_8.1.9717.arr复制一份到自己自己的libs文件夹里
@@ -8,9 +11,10 @@
 
 ```
  allprojects {
- flatDir{
-            dirs 'libs'
-        }
+         ...
+       flatDir{
+              dirs 'libs'
+           }
         }
 ```        
 
@@ -20,6 +24,8 @@
 一、 
 ```
          defaultConfig{
+         
+            ...
           ndk {//
                     abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
                 }
@@ -30,8 +36,8 @@
 
 ```
       dependencies {
-      ...
-      implementation(name: 'LiteAVSDK_Smart_8.1.9717', ext: 'aar')//
+               ...
+            implementation(name: 'LiteAVSDK_Smart_8.1.9717', ext: 'aar')//
 
       }
 ```      
@@ -67,9 +73,7 @@ packages.add(new AppReactPackage());  //添加在return packages;前
 二、使用 url改为自己需要的链接
 
 
-// /*
-// *设备管理
-// * */
+Example:
 
 ```
 import React, {Component} from 'react';
@@ -92,7 +96,7 @@ export default class deviceManager extends Component{
       };
 
     componentDidMount() {
-    DeviceEventEmitter.addListener('startPlay', () => {
+    DeviceEventEmitter.addListener('startPlay', () => {    //监听直播加载完成
         console.warn("startPlay--》");
 
     });
