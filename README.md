@@ -15,7 +15,8 @@
 
 4、在android/app/build.gradle下的两个地方添加如下代码
 
-一、  defaultConfig{
+一、 
+defaultConfig{
          
           ndk {//
                     abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
@@ -23,7 +24,8 @@
           javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
       }
       
-二、  dependencies {
+二、  
+dependencies {
 
       ...
       implementation(name: 'LiteAVSDK_Smart_8.1.9717', ext: 'aar')//
@@ -52,6 +54,7 @@ packages.add(new AppReactPackage());  //添加在return packages;前
 // /*
 // *设备管理
 // * */
+
 import React, {Component} from 'react';
 import {
     View,
