@@ -18,23 +18,23 @@
 4、在android/app/build.gradle下的两个地方添加如下代码
 
 一、 
-
+```
          defaultConfig{
           ndk {//
                     abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
                 }
           javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
       }
-      
+```      
 二、  
 
-
+```
       dependencies {
       ...
       implementation(name: 'LiteAVSDK_Smart_8.1.9717', ext: 'aar')//
 
       }
-      
+```      
       
       
 5、把rtmpdemo下的android/app/src/main/java/com/rtmpdemo/view的整个view文件夹放到自己项目同一路径下
@@ -46,12 +46,12 @@
       
 6、在 MainApplication.java把包名引入
 
-
+```
 import com.rtmpdemo.view.AppReactPackage;  
 
 
 packages.add(new AppReactPackage());  //添加在return packages;前
-
+```
 
 
 
@@ -71,7 +71,7 @@ packages.add(new AppReactPackage());  //添加在return packages;前
 // *设备管理
 // * */
 
-
+```
 import React, {Component} from 'react';
 import {
     View,
@@ -109,7 +109,7 @@ export default class deviceManager extends Component{
         )
     }
 }
-
+```
 
 
 
