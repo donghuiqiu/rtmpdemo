@@ -33,15 +33,28 @@
 
       }
       
+      
+      
 5、把rtmpdemo下的android/app/src/main/java/com/rtmpdemo/view的整个view文件夹放到自己项目同一路径下
       
       
+      
+      
+      
+      
 6、在 MainApplication.java把包名引入
+
 
 import com.rtmpdemo.view.AppReactPackage;  
 
 
 packages.add(new AppReactPackage());  //添加在return packages;前
+
+
+
+
+
+
 
 
 7、前端页面的调用
@@ -55,6 +68,7 @@ packages.add(new AppReactPackage());  //添加在return packages;前
 // /*
 // *设备管理
 // * */
+
 
 import React, {Component} from 'react';
 import {
