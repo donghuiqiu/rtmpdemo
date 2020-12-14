@@ -7,11 +7,10 @@
 3、在android/build.gradle添加如下代码
 
  allprojects {
-        
         flatDir{
             dirs 'libs'
         }
-}
+        }
 
 
 4、在android/app/build.gradle下的两个地方添加如下代码
