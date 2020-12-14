@@ -6,8 +6,8 @@
 
 3、在android/build.gradle添加如下代码
 
-allprojects {
-        ...
+ allprojects {
+        
         flatDir{
             dirs 'libs'
         }
@@ -17,8 +17,7 @@ allprojects {
 4、在android/app/build.gradle下的两个地方添加如下代码
 
 一、  defaultConfig{
-          ...
-          
+         
           ndk {//
                     abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
                 }
