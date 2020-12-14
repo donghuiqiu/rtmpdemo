@@ -16,8 +16,8 @@
 4、在android/app/build.gradle下的两个地方添加如下代码
 
 一、 
-defaultConfig{
-         
+
+         defaultConfig{
           ndk {//
                     abiFilters "armeabi", "armeabi-v7a", "arm64-v8a"
                 }
@@ -25,8 +25,9 @@ defaultConfig{
       }
       
 二、  
-dependencies {
 
+
+      dependencies {
       ...
       implementation(name: 'LiteAVSDK_Smart_8.1.9717', ext: 'aar')//
 
